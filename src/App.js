@@ -5,30 +5,37 @@ import EmployeeTable from "./component/EmployeeTable";
 import TableHeader from "./component/TableHeader";
 import SortByNameButton from "./component/SortByNameButton";
 import SortByIdButton from "./component/SortByIdButton";
+import FilterInput from "./component/FilterInput";
 
 class App extends Component {
   // Setting this.state.employees to the employees json array
   state = {
     employees,
+    favoriteFoods: "",
+    original: employees
   };
 
-  sortByName = (name) => {
+  sortByName = () => {
     let employees = this.state.employees.sort((a, b) => (a.name > b.name) ? 1 : -1);
     this.setState({employees});
   };
 
-  sortById = (id) => {
+  sortById = () => {
     let employees = this.state.employees.sort((a, b) => (a.id > b.id) ? 1 : -1);
-    this.setState({employees});;
+    this.setState({employees});
   }
 
-  removeFriend = (id) => {
-    // Filter this.state.employees for employees with an id not equal to the id being removed
-    const employees = this.state.employees.filter((friend) => friend.id !== id);
-    // Set this.state.employees equal to the new employees array
-    this.setState({ employees });
-  };
-  // Map over this.state.employees and render a FriendCard component for each friend object
+  handleInputChange = (event) => {
+     const { name, value } = event.target;
+     this.setState({[name]:value})
+     console.log(value);
+     const newFavFoods = this.state.original.filter((employee) => {
+       return employee.favoriteFood.toLowerCase().includes(value.toLowerCase())
+     })
+     this.setState({employees: newFavFoods});
+  }
+
+  // Map over this.state.employees and render an employee component for each employee object
   render() {
     return (
       <div>
@@ -38,6 +45,9 @@ class App extends Component {
         <SortByIdButton 
           sortById={this.sortById} 
         />
+        <FilterInput 
+          favoriteFoods={this.state.favoriteFoods} 
+          handleInputChange={this.handleInputChange} />
         <table className="table table-striped table-dark">
           <TableHeader employee={employees[0]} />
           <tbody>
