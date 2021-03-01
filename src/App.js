@@ -3,13 +3,25 @@ import React, { Component } from "react";
 import employees from "./employees.json";
 import EmployeeTable from "./component/EmployeeTable";
 import TableHeader from "./component/TableHeader";
-import SortButton from "./component/SortButton";
+import SortByNameButton from "./component/SortByNameButton";
+import SortByIdButton from "./component/SortByIdButton";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+  // Setting this.state.employees to the employees json array
   state = {
     employees,
   };
+
+  sortByName = (name) => {
+    let employees = this.state.employees.sort((a, b) => (a.name > b.name) ? 1 : -1);
+    this.setState({employees});
+  };
+
+  sortById = (id) => {
+    let employees = this.state.employees.sort((a, b) => (a.id > b.id) ? 1 : -1);
+    this.setState({employees});;
+  }
+
   removeFriend = (id) => {
     // Filter this.state.employees for employees with an id not equal to the id being removed
     const employees = this.state.employees.filter((friend) => friend.id !== id);
@@ -20,7 +32,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SortButton />
+        <SortByNameButton 
+          sortByName={this.sortByName}
+        />
+        <SortByIdButton 
+          sortById={this.sortById} 
+        />
         <table className="table table-striped table-dark">
           <TableHeader employee={employees[0]} />
           <tbody>
