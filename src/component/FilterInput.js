@@ -15,7 +15,8 @@ function FilterInput(props) {
         aria-describedby="inputGroup-sizing-sm"
         name="favoriteFoods"
         value={props.favoriteFoods}  
-        onChange={props.handleInputChange}    />
+        onChange={props.handleInputChange}    
+      />
     </div>
   );
 }

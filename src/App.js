@@ -27,11 +27,10 @@ class App extends Component {
 
   handleInputChange = (event) => {
      const { name, value } = event.target;
-     this.setState({[name]:value})
-     console.log(value);
+     this.setState({[name]:value});
      const newFavFoods = this.state.original.filter((employee) => {
-       return employee.favoriteFood.toLowerCase().includes(value.toLowerCase())
-     })
+       return employee.favoriteFood.toLowerCase().includes(value.toLowerCase());
+     });
      this.setState({employees: newFavFoods});
   }
 
