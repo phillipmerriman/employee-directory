@@ -75,7 +75,7 @@ Employee Directory using React. Renders a table of employess which the user can 
 
 - 💼 Phillip Merriman: [portfolio](https://phillipmerriman.github.io/portfolio/)
 - :octocat: Github: [phillipmerriman](https://github.com/phillipmerriman)
-- ![linkedin](public/assets/icons8-linkedin-20.png) LinkedIn: [phillip-merriman-jr](https://www.linkedin.com/in/phillip-merriman-jr-62227485/)
+- ![linkedin](public/icons8-linkedin-20.png) LinkedIn: [phillip-merriman-jr](https://www.linkedin.com/in/phillip-merriman-jr-62227485/)
 
 ### Built With
 
