@@ -15,16 +15,19 @@ class App extends Component {
     original: employees
   };
 
+  // sort employees by name
   sortByName = () => {
     let employees = this.state.employees.sort((a, b) => (a.name > b.name) ? 1 : -1);
     this.setState({employees});
   };
 
+  // sort employees by id
   sortById = () => {
     let employees = this.state.employees.sort((a, b) => (a.id > b.id) ? 1 : -1);
     this.setState({employees});
   }
 
+  // filter employees by favorite food
   handleInputChange = (event) => {
      const { name, value } = event.target;
      this.setState({[name]:value});
@@ -53,14 +56,6 @@ class App extends Component {
             {this.state.employees.map((employee) => (
               <EmployeeTable
                 employee={employee}
-                // removeFriend={this.removeFriend}
-                // id={employee.id}
-                // key={employee.id}
-                // name={employee.name}
-                // image={employee.image}
-                // occupation={employee.occupation}
-                // location={employee.location}
-                // email={employee.email}
               />
             ))}
           </tbody>
@@ -69,4 +64,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;
