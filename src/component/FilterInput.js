@@ -5,7 +5,7 @@ function FilterInput(props) {
     <div class="input-group input-group-lg">
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-lg">
-          Large
+          Type in a food to filter employees by favorite food!
         </span>
       </div>
       <input

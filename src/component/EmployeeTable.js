@@ -7,10 +7,6 @@ function EmployeeTable(props) {
       {Object.keys(employee).map((key) => (
         <td>{employee[key]}</td>
       ))}
-      {/* <td>{employee.name}</td>
-          <td>{employee.email}</td>
-          <td>{employee.occuptaion}</td>
-          <td>{employee.location}</td> */}
     </tr>
   );
 }

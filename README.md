@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# employee-directory
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</br>
+<p align="center">
+    <img src="https://img.shields.io/github/languages/count/phillipmerriman/budget-tracker?style=for-the-badge" alt="Languages" />
+    <img src="https://img.shields.io/github/languages/top/phillipmerriman/budget-tracker?style=for-the-badge" alt="Top Language" />
+    <img src="https://img.shields.io/github/languages/code-size/phillipmerriman/budget-tracker?style=for-the-badge" alt="Code Size" />
+    <img src="https://img.shields.io/github/repo-size/phillipmerriman/budget-tracker?style=for-the-badge" alt="Repo Size" />   
+    <img src="https://img.shields.io/tokei/lines/github/phillipmerriman/budget-tracker?style=for-the-badge" alt="Total Lines" />
+    <img src="https://img.shields.io/github/last-commit/phillipmerriman/budget-tracker?style=for-the-badge" alt="Last Commit" />  
+    <img src="https://img.shields.io/github/issues/phillipmerriman/budget-tracker?style=for-the-badge" alt="Issues" />  
+    <img src="https://img.shields.io/github/followers/phillipmerriman?style=social" alt="Followers" />  
+</p>
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+Employee Directory using React. Renders a table of employess which the user can sort by name or id, and filter by the employees' favorite food.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* [Installation](#installation)
+* [Usage](#usage)
+    * [Screenshots](#screenshots)
+    * [Snippets](#snippets)
+* [Credits](#credits)
+* [License](#license)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. No installation necessary. Simply click on this link: 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+    <a href="https://phillipmerriman.github.io/employee-directory/" target="_blank"><img src="https://img.shields.io/badge/-👉 See Live Site-success?style=for-the-badge"  alt="Live Site" /></a>
+</p>
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Screeshots
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Main page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Site](public/main.PNG)
 
-### `npm run eject`
+2. The user clicked the "Sort by name" button
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Site](public/sorted-by-name.PNG)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. The user filtered by favorite food
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Site](public/boogers.PNG)
 
-## Learn More
+### Snippets
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Filter the employees by there favorite food:
 
-### Code Splitting
+```javascript
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  handleInputChange = (event) => {
+     const { name, value } = event.target;
+     this.setState({[name]:value});
+     const newFavFoods = this.state.original.filter((employee) => {
+       return employee.favoriteFood.toLowerCase().includes(value.toLowerCase());
+     });
+     this.setState({employees: newFavFoods});
+  } 
+    
+```
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Credits
 
-### Making a Progressive Web App
+### Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- 💼 Phillip Merriman: [portfolio](https://phillipmerriman.github.io/portfolio/)
+- :octocat: Github: [phillipmerriman](https://github.com/phillipmerriman)
+- ![linkedin](public/assets/icons8-linkedin-20.png) LinkedIn: [phillip-merriman-jr](https://www.linkedin.com/in/phillip-merriman-jr-62227485/)
 
-### Advanced Configuration
+### Built With
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+</br>
+<p align="center">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://img.shields.io/badge/-HTML-orange?style=for-the-badge"  alt="HTML" /></a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/-CSS-blue?style=for-the-badge" alt="CSS" /></a>
+    <a href="https://www.javascript.com/"><img src="https://img.shields.io/badge/-Javascript-yellow?style=for-the-badge" alt="Javascript" /></a>
+    <a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/-Bootstrap-blueviolet?style=for-the-badge" alt="Bootstrap" /></a>
+    <a href="https://nodejs.org/en/"><img src="https://img.shields.io/badge/-Node-orange?style=for-the-badge" alt="Node" /></a>
+    <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/-React-blue?style=for-the-badge" alt="React" /></a>
+    <a href="https://www.npmjs.com/package/axios"><img src="https://img.shields.io/badge/-Axios-blue?style=for-the-badge" alt="Axios" /></a>
+</p>
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
