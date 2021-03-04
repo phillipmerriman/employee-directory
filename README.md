@@ -2,13 +2,13 @@
 
 </br>
 <p align="center">
-    <img src="https://img.shields.io/github/languages/count/phillipmerriman/budget-tracker?style=for-the-badge" alt="Languages" />
-    <img src="https://img.shields.io/github/languages/top/phillipmerriman/budget-tracker?style=for-the-badge" alt="Top Language" />
-    <img src="https://img.shields.io/github/languages/code-size/phillipmerriman/budget-tracker?style=for-the-badge" alt="Code Size" />
-    <img src="https://img.shields.io/github/repo-size/phillipmerriman/budget-tracker?style=for-the-badge" alt="Repo Size" />   
-    <img src="https://img.shields.io/tokei/lines/github/phillipmerriman/budget-tracker?style=for-the-badge" alt="Total Lines" />
-    <img src="https://img.shields.io/github/last-commit/phillipmerriman/budget-tracker?style=for-the-badge" alt="Last Commit" />  
-    <img src="https://img.shields.io/github/issues/phillipmerriman/budget-tracker?style=for-the-badge" alt="Issues" />  
+    <img src="https://img.shields.io/github/languages/count/phillipmerriman/employee-directory?style=for-the-badge" alt="Languages" />
+    <img src="https://img.shields.io/github/languages/top/phillipmerriman/employee-directory?style=for-the-badge" alt="Top Language" />
+    <img src="https://img.shields.io/github/languages/code-size/phillipmerriman/employee-directory?style=for-the-badge" alt="Code Size" />
+    <img src="https://img.shields.io/github/repo-size/phillipmerriman/employee-directory?style=for-the-badge" alt="Repo Size" />   
+    <img src="https://img.shields.io/tokei/lines/github/phillipmerriman/employee-directory?style=for-the-badge" alt="Total Lines" />
+    <img src="https://img.shields.io/github/last-commit/phillipmerriman/employee-directory?style=for-the-badge" alt="Last Commit" />  
+    <img src="https://img.shields.io/github/issues/phillipmerriman/employee-directory?style=for-the-badge" alt="Issues" />  
     <img src="https://img.shields.io/github/followers/phillipmerriman?style=social" alt="Followers" />  
 </p>
 
